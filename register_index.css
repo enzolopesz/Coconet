@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    background-color: #f1efe7;
+    height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do body */
+    align-items: center; /* Centraliza verticalmente o conteúdo do body */
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente dentro da logo */
+    align-items: center; /* Garante que a logo use o alinhamento central para a imagem */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da logo para separar do formulário */
+}
+
+img {
+    max-width: 100%; /* Ajusta a imagem para caber dentro da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    width: 300px;
+}
+
+.title {
+    font-size: 28px;
+    color: #754c2d;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #754c2d;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #754c2d;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: #754c2d;
+}
+
+.signin a:hover {
+    text-decoration: underline #754c2d;
+}
+
+.flex {
+    display: flex;
+    gap: 6px;
+}
+
+.flex .direita {
+    display: flex;
+    gap: 6px;
+}
+
+.flex .esquerda {
+    display: flex;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 94%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid + span {
+    color: green;
+}
+
+.submit {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #754c2d;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
